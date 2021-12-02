@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CadastroWebMvc",
+    "\\CadastroWebMvc\\CadastroWebMvc",
+    "\\CadastroWebMvc\\CadastroWebMvc\\Models",
+    "\\CadastroWebMvc\\CadastroWebMvc\\Models\\ViewModels"
   ],
+  "SelectedNode": "\\CadastroWebMvc\\CadastroWebMvc\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }

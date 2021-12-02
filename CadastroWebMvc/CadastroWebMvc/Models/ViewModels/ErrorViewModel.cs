@@ -1,6 +1,6 @@
 using System;
 
-namespace CadastroWebMvc.Models
+namespace CadastroWebMvc.Models.ViewModels
 {
     public class ErrorViewModel
     {
