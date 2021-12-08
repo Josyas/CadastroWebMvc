@@ -3,6 +3,8 @@
 Cadastro de produto.
 <br/>Adicionar Produto
 <br/>Remover Produto.
+<br/>Cadrastro de Funcionário
+<br/>Total de vendas
 
 
 <br/>Tecnologias;
