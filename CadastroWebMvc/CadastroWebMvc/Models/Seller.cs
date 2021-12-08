@@ -29,11 +29,6 @@ namespace CadastroWebMvc.Models
         }
 
 
-
-
-
-
-
         //Adicionar uma venda na lista de venda
         public void AddSales(SalesRecord sr)
         {
