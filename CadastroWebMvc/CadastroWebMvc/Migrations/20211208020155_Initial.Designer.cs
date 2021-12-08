@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CadastroWebMvc.Migrations
 {
     [DbContext(typeof(CadastroWebMvcContext))]
-    [Migration("20211203085225_OtherEntities")]
-    partial class OtherEntities
+    [Migration("20211208020155_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,7 +48,7 @@ namespace CadastroWebMvc.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("SalesRecords");
+                    b.ToTable("SalesRecord");
                 });
 
             modelBuilder.Entity("CadastroWebMvc.Models.Seller", b =>
@@ -70,7 +70,7 @@ namespace CadastroWebMvc.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Sellers");
+                    b.ToTable("Seller");
                 });
 
             modelBuilder.Entity("CadastroWebMvc.Models.SalesRecord", b =>

@@ -13,11 +13,13 @@ namespace CadastroWebMvc.Models
         {
         }
 
-        public Department(int id, string name)
+        public Department(string name)
         {
-            Id = id;
+            
             Name = name;
+            
         }
+
 
         /// Adicionar o vendedor na lista seller
         public void AddSeler(Seller seller)

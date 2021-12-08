@@ -46,7 +46,7 @@ namespace CadastroWebMvc.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("SalesRecords");
+                    b.ToTable("SalesRecord");
                 });
 
             modelBuilder.Entity("CadastroWebMvc.Models.Seller", b =>
@@ -68,7 +68,7 @@ namespace CadastroWebMvc.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Sellers");
+                    b.ToTable("Seller");
                 });
 
             modelBuilder.Entity("CadastroWebMvc.Models.SalesRecord", b =>
