@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CadastroWebMvc.Data;
+using CadastroWebMvc.Services;
 
 namespace CadastroWebMvc
 {
@@ -40,6 +41,7 @@ namespace CadastroWebMvc
                    options.UseMySql(Configuration.GetConnectionString("CadastroWebMvcContext"), builder =>
                    builder.MigrationsAssembly("CadastroWebMvc")));
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

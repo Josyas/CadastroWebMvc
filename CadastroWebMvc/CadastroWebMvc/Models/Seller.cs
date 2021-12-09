@@ -17,18 +17,15 @@ namespace CadastroWebMvc.Models
         {
         }
 
-        public Seller( string name, string email, DateTime birthDate, double baseSalary, Department department)
+        public Seller(string name, string email, DateTime birthDate, double baseSalary, Department department)
         {
-            
             Name = name;
             Email = email;
             BirthDate = birthDate;
             BaseSalary = baseSalary;
             Department = department;
-            
-        }
-
-
+        } 
+        
         //Adicionar uma venda na lista de venda
         public void AddSales(SalesRecord sr)
         {
