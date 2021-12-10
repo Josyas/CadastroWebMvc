@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CadastroWebMvc.Services;
+using CadastroWebMvc.Models.ViewModels;
 using CadastroWebMvc.Models;
 
 namespace CadastroWebMvc.Controllers
@@ -11,10 +12,12 @@ namespace CadastroWebMvc.Controllers
     public class SellersController : Controller
     {
         private readonly SellerService _sellersService;
+        private readonly DepartmentService _departmentService;
 
-        public SellersController(SellerService sellerService)
+        public SellersController(SellerService sellerService, DepartmentService departmentService)
         {
             _sellersService = sellerService;
+            _departmentService = departmentService;
         }
 
         public IActionResult Index()
@@ -25,7 +28,9 @@ namespace CadastroWebMvc.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var departments = _departmentService.FindAll();
+            var viewModel = new SellerFormViewModel { Departments = departments };
+            return View(viewModel);
         }
 
         [HttpPost]
