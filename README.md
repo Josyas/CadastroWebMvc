@@ -3,7 +3,7 @@
 Cadastro de produto.
 <br/>Adicionar Produto
 <br/>Remover Produto.
-<br/>Cadrastro de Funcionário
+<br/>Cadrastro Vendedor
 <br/>Total de vendas
 
 
