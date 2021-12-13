@@ -23,7 +23,7 @@ namespace CadastroWebMvc.Data
                _context.Seller.Any() ||
                _context.SalesRecord.Any())
             {
-                return; // o banco de dado ja     foi populado
+                return; // o banco de dado ja foi populado
             }
 
 

@@ -3,10 +3,10 @@
     "",
     "\\CadastroWebMvc",
     "\\CadastroWebMvc\\CadastroWebMvc",
-    "\\CadastroWebMvc\\CadastroWebMvc\\Migrations",
-    "\\CadastroWebMvc\\CadastroWebMvc\\Models",
-    "\\CadastroWebMvc\\CadastroWebMvc\\Models\\ViewModels"
+    "\\CadastroWebMvc\\CadastroWebMvc\\Services",
+    "\\CadastroWebMvc\\CadastroWebMvc\\Views",
+    "\\CadastroWebMvc\\CadastroWebMvc\\Views\\Sellers"
   ],
-  "SelectedNode": "\\CadastroWebMvc\\CadastroWebMvc\\Migrations\\20211203085225_OtherEntities.cs",
+  "SelectedNode": "\\CadastroWebMvc\\CadastroWebMvc\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
