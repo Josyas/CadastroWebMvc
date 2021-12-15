@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.Serialization;
+using CadastroWebMvc.Services.Exceptions;
 
 namespace CadastroWebMvc.Services
 {
@@ -45,6 +47,25 @@ namespace CadastroWebMvc.Services
             _context.SaveChanges(); //confirmação do entityFramework
         }
 
+        // atualização de vendedor
+        public void Update(Seller obj)
+        {
+            if (!_context.Seller.Any(x => x.Id == obj.Id))
+            {
+                throw new NotFoundException("Id not found");
+            }
+            try
+            {
+                _context.Update(obj);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                throw new DbConcurrencyException(e.Message);
+            }
+        }
        
     }
+
+   
 }

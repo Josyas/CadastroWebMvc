@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CadastroWebMvc.Services;
 using CadastroWebMvc.Models.ViewModels;
 using CadastroWebMvc.Models;
+using CadastroWebMvc.Services.Exceptions;
 
 namespace CadastroWebMvc.Controllers
 {
@@ -83,6 +84,51 @@ namespace CadastroWebMvc.Controllers
             }
 
             return View(obj);
+        }
+
+        //editar vendedor
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var obj = _sellersService.FindById(id.Value);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            List<Department> departments = _departmentService.FindAll();
+            SellerFormViewModel viewModel = new SellerFormViewModel { Seller = obj, Departments = departments };
+            return View(viewModel);
+        }
+
+        //Edit para metodo POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, Seller seller)
+        {
+            if (id != seller.Id)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                _sellersService.Update(seller);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (NotFoundException)
+            {
+                return NotFound();
+            }
+            catch (DbConcurrencyException)
+            {
+                return BadRequest();
+            }
+
         }
 
 
