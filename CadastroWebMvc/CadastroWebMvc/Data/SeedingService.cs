@@ -19,7 +19,7 @@ namespace CadastroWebMvc.Data
 
         public void Seed()
         {
-            if(_context.Department.Any() || 
+            if (_context.Department.Any() ||
                _context.Seller.Any() ||
                _context.SalesRecord.Any())
             {

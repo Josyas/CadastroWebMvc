@@ -1,9 +1,9 @@
 ﻿using CadastroWebMvc.Data;
 using CadastroWebMvc.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CadastroWebMvc.Services
 {
@@ -17,14 +17,11 @@ namespace CadastroWebMvc.Services
         }
 
         //Retornar todos departamentos
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+            return await _context.Department.OrderBy(X => X.Name).ToListAsync();
         }
 
-        internal object FindById(int value)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
+
